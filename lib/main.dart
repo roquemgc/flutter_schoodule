@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_schoodule/homePage.dart';
+import 'package:flutter_schoodule/Screens/Welcome/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Auth',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: HomePage(),
+      home: WelcomeScreen(),
     );
   }
 }
