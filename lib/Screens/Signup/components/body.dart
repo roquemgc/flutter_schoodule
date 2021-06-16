@@ -68,8 +68,25 @@ class Body extends StatelessWidget {
                   shape: BoxShape.circle, 
                 ),
                 child: new Image.asset(
-                  "assets/icons/googleLogo.png",
-                  height: 30,
+                  "assets/icons/google.png",
+                  height: 25,
+                  width: 25,
+                  fit: BoxFit.cover,
+                )
+              ),
+                            Container(
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2,
+                    color: Colors.purpleAccent
+                  ),
+                  shape: BoxShape.circle, 
+                ),
+                child: new Image.asset(
+                  "assets/icons/facebook.png",
+                  height: 25,
+                  width: 25,
                   fit: BoxFit.cover,
                 )
               )
