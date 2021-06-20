@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_schoodule/Screens/Login/components/background.dart';
 import 'package:flutter_schoodule/Screens/Login/login_screen.dart';
+import 'package:flutter_schoodule/Screens/Signup/components/signup_social_button.dart';
 import 'package:flutter_schoodule/components/already_have_an_account_check.dart';
 import 'package:flutter_schoodule/components/rounded_button.dart';
 import 'package:flutter_schoodule/components/rounded_input_field.dart';
@@ -58,38 +59,12 @@ class Body extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.purpleAccent
-                  ),
-                  shape: BoxShape.circle, 
-                ),
-                child: new Image.asset(
-                  "assets/icons/google.png",
-                  height: 25,
-                  width: 25,
-                  fit: BoxFit.cover,
-                )
+              SignupSocialButton(
+                imageUrl: "assets/icons/facebook.png",
               ),
-                            Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2,
-                    color: Colors.purpleAccent
-                  ),
-                  shape: BoxShape.circle, 
-                ),
-                child: new Image.asset(
-                  "assets/icons/facebook.png",
-                  height: 25,
-                  width: 25,
-                  fit: BoxFit.cover,
-                )
-              )
+              SignupSocialButton(
+                imageUrl: "assets/icons/google.png",
+              ),
             ],
           )
         ],
@@ -97,5 +72,6 @@ class Body extends StatelessWidget {
     );
   }
 }
+
 
 
