@@ -11,6 +11,7 @@ class SignupSocialButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 7),
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         border: Border.all(
