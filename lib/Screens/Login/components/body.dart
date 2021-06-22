@@ -5,12 +5,18 @@ import 'package:flutter_schoodule/components/already_have_an_account_check.dart'
 import 'package:flutter_schoodule/components/rounded_button.dart';
 import 'package:flutter_schoodule/components/rounded_input_field.dart';
 import 'package:flutter_schoodule/components/rounded_password_field.dart';
+import 'package:flutter_schoodule/services/authentication_service.dart';
+import 'package:provider/provider.dart';
 
 class Body extends StatelessWidget {
-  const Body({
+  
+  Body({
     Key key,
   }) : super(key: key);
   
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,7 +41,12 @@ class Body extends StatelessWidget {
           ),
           RoundedButton(
             text: "LOGIN",
-            press: () {},
+            press: () {
+              context.read<AuthenticationService>().signIn(
+                email: emailController.text.trim(),
+                password: passwordController.text.trim()
+              );
+            },
             color: Colors.deepPurple,
             textColor: Colors.white,
           ),
